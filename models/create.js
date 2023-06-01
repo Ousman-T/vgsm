@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 
 const createSchema = new Schema({
-    game: {type: String, required: true},
-    title:{type: String, required: true},
-    post:{type: String, required: true},
+    userName: {type: String, required: true},
+    postTitle: {type: String, required: true},
+    postBody: {type: String, required: true},
     timestamps: true,
 })
 

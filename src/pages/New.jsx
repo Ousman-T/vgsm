@@ -15,7 +15,24 @@ function New(){
     const handleSubmit = async (e) => {
         console.log('Button clicked!');
         e.preventDefault();
-    }
+        
+        
+        try {
+            console.log(newPost);
+            const postData = {
+                userName: newPost.userName,
+                postTitle: newPost.postTitle,
+                postBody: newPost.postBody
+            }
+            const response = await createPost(postData);
+            console.log(response);
+            alert('Post recieved in database!')
+        } catch(error){
+            console.log('Error occurred in the catch');
+            console.log(error);
+            setNewPost({...newPost, error: "Problem saving post information"})
+        };
+    };
     return(
         <div className="newPost">
             <h1>Create a post</h1>
