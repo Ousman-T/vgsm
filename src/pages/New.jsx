@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function New(){
     const [newPost, setNewPost] = useState({})
     return(
